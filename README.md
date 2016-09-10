@@ -7,6 +7,16 @@ Dharamendra Kumar
 
 Malware Classification
 
+Classification Strategy: Random Forest classifier
+
+
+Technologies Used:
+-----------------
+- Python 2.7
+- Apache Spark 2.0
+- 
+
+
 Preprocessing:
 -------------
 - The hash files were read from S3 storage from *path*
