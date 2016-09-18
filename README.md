@@ -1,4 +1,5 @@
-# days-project2
+Team Name: DAYS
+
 Team Members: 
 Shubhi Jain
 Sharmin Pathan
@@ -14,6 +15,9 @@ Technologies Used:
 -----------------
 - Python 2.7
 - Apache Spark 2.0
+- Resilient Distributed Datasets (RDDs)
+- Datasets
+- Java 1.8
 
 
 Preprocessing:
@@ -30,16 +34,10 @@ Preprocessing:
 - The parquet file is accessed everytime the data is to be read.
 
 
-
-
-
-
-
-tf-idf ml
-
-ngram
-extract unique features from returned features
-tf-idf - brought it to sparse vector
-random forest
-
+Flow:
+----
+- N-grams: 2,3 and 4 ngrams have been generated from the parquet file.
+- TF - IDF applied to the parquet file.
+- Extracted unique features from the returned features
+- Applied random forest
 
