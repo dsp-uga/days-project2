@@ -43,7 +43,6 @@ Preprocessing of Opcodes from .asm files:
 
 Flow:
 ----
-- N-grams: 2,3 and 4 ngrams have been generated from the parquet file. - pending
 - N-grams are generated from the preprocessed byte file and opcodes.
 - Convert the ngrams of the byte file and opcodes to vectors of token counts.
 - These vectors are brought together by the Vector Assembler.
