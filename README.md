@@ -16,7 +16,7 @@ Technologies Used:
 - Python 2.7
 - Apache Spark 2.0
 - Resilient Distributed Datasets (RDDs)
-- Datasets
+- Dataframes
 - Java 1.8
 
 
@@ -49,3 +49,9 @@ Flow:
 - The data is then fed to Random Forest Classifier.
 - The prediction is then computed.
 
+
+Tuning the accuracy:
+-------------------
+- 1,2,3,4 N-grams of byte file and opcodes were generated in order to test which provides a better accuracy.
+- Tuning of the parameters of Random Forest classifier, namely maxDepth, no. of trees, maxBin.
+- Final parameter list for the Random Forest classifier used: 
