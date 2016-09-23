@@ -47,7 +47,7 @@ def main():
     cvTest = CountVectorizer(inputCol="n-grams", outputCol="opcodeFeatures", vocabSize=256, minDF=1.0,minTF=2.0)
     model1Test = cvTest.fit(inputTestN1gram)
     featurizedTest1Data = model1Test.transform(inputTestN1gram).select("hashcodefile","opcodeFeatures")
-    featurizedTest1Data.write.parquet("byte1GramFinalTesting.parquet")
+    featurizedTest1Data.write.parquet("opcode1GramFinalTesting.parquet")
   
     #2Gram
     n2gramTestDataRDD=createNgram(opcodeTestParque,2)
@@ -56,7 +56,7 @@ def main():
     cvTest1 = CountVectorizer(inputCol="n-grams", outputCol="opcodeFeatures", vocabSize=65536, minDF=1.0,minTF=2.0)
     model2Test = cvTest1.fit(inputTestN2gram)
     featurizedTest2Data = model2Test.transform(inputTestN2gram).select("hashcodefile","opcodeFeatures")
-    featurizedTest2Data.write.parquet("byte2GramFinalTesting.parquet")
+    featurizedTest2Data.write.parquet("opcode2GramFinalTesting.parquet")
 
     #3Gram
     n3gramTestDataRDD=createNgram(opcodeTestParque,3)
@@ -64,7 +64,7 @@ def main():
 
     model3Test = cvTest1.fit(inputTestN3gram)
     featurizedTest3Data = model3Test.transform(inputTestN3gram).select("hashcodefile","opcodeFeatures")
-    featurizedTest3Data.write.parquet("byte3GramFinalTesting.parquet")
+    featurizedTest3Data.write.parquet("opcode3GramFinalTesting.parquet")
 
     #4Gram
     n4gramTestDataRDD=createNgram(opcodeTestParque,4)
@@ -72,12 +72,11 @@ def main():
 
     model4Test = cvTest1.fit(inputTestN4gram)
     featurizedTest4Data = model4Test.transform(inputTestN4gram).select("hashcodefile","opcodeFeatures")
-    featurizedTest4Data.write.parquet("byte4GramFinalTesting.parquet")
+    featurizedTest4Data.write.parquet("opcode4GramFinalTesting.parquet")
 
     #--------------------------------------
     # Ngram Generation of Testing Data
     #--------------------------------------
-
 
     #-------------------------------------
     # Ngram Generation of Training Data
@@ -97,7 +96,7 @@ def main():
     cv = CountVectorizer(inputCol="n-grams", outputCol="opcodeFeatures", vocabSize=256, minDF=1.0,minTF=2.0)
     model1Train = cv.fit(inputTrainN1gram)
     featurizedTrain1Data = model1Train.transform(inputTrainN1gram).select("hashcodefile","label","opcodeFeatures")
-    featurizedTrain1Data.write.parquet("byte1GramFinalTraining.parquet")
+    featurizedTrain1Data.write.parquet("opcode1GramFinalTraining.parquet")
 
     #2gram
     n2gramTrainDataRDD=createNgram(opcodeTrainParque,2)
@@ -106,7 +105,7 @@ def main():
     cv1 = CountVectorizer(inputCol="n-grams", outputCol="opcodeFeatures", vocabSize=65536, minDF=1.0,minTF=2.0)
     model2Train = cv1.fit(inputTrainN2gram)
     featurizedTrain2Data = model2Train.transform(inputTrainN2gram).select("hashcodefile","label","opcodeFeatures")
-    featurizedTrain2Data.write.parquet("byte2GramFinalTraining.parquet")
+    featurizedTrain2Data.write.parquet("opcode2GramFinalTraining.parquet")
 
     #3 gran
     n3gramTrainDataRDD=createNgram(opcodeTrainParque,3)
@@ -114,7 +113,7 @@ def main():
 
     model3Train = cv1.fit(inputTrainN3gram)
     featurizedTrain3Data = model3Train.transform(inputTrainN3gram).select("hashcodefile","label","opcodeFeatures")
-    featurizedTrain3Data.write.parquet("byte3GramFinalTraining.parquet")
+    featurizedTrain3Data.write.parquet("opcode3GramFinalTraining.parquet")
 
     # 4 gram
     n4gramTrainDataRDD=createNgram(opcodeTrainParque,4)
@@ -122,13 +121,11 @@ def main():
 
     model4Train = cv1.fit(inputTrainN4gram)
     featurizedTrain4Data = model4Train.transform(inputTrainN4gram).select("hashcodefile","label","opcodeFeatures")
-    featurizedTrain4Data.write.parquet("byte4GramFinalTraining.parquet")
+    featurizedTrain4Data.write.parquet("opcode4GramFinalTraining.parquet")
 
     #---------------------------------------
     # Ngram Generation of Training Data
     #---------------------------------------
     
-
-
 if __name__ == "__main__":
     main(sys.argv)
