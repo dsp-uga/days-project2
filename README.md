@@ -22,10 +22,10 @@ Technologies Used:
 
 Preprocessing of Byte File:
 --------------------------
-- The hash files were read from S3 storage from "https://s3.amazonaws.com/eds-uga-csci8360/data/project2/metadata/<filename>"
+- The hash files on S3 storage were read from "https://s3.amazonaws.com/eds-uga-csci8360/data/project2/metadata/<filename>"
 - The next step was to read the label file
 - Create a pair resulting from hash file and label file
-- Read the contents of all the files specified in the training set
+- Read the contents of all files specified in the training set
 - Cleaning of the .bytes files with the following parser
 (i)  removal of pointers
 (ii) removal of special characters (??)
@@ -44,21 +44,21 @@ Preprocessing of Opcodes from .asm files:
 Flow:
 ----
 - N-grams are generated from the preprocessed byte file and opcodes.
-- Convert the ngrams of the byte file and opcodes to vectors of token counts.
+- Convert the N-grams of the byte file and opcodes to vectors of token counts.
 - These vectors are brought together by the Vector Assembler.
 - The data is then fed to Random Forest Classifier.
-- The prediction is then computed.
+- The prediction is computed.
 
 
 Tuning the accuracy:
 -------------------
-- 1,2,3,4 N-grams of byte file and opcodes were generated in order to test which provides a better accuracy.
+- 1,2,3,4 grams of byte file and opcodes were generated in order to test which provides a better accuracy.
 - Tuning of the parameters of Random Forest classifier, namely maxDepth, no. of trees, maxBin.
 - Final parameter list for the Random Forest classifier used: 
 
 
 Challenges Faced:
 ----------------
-- Memory issues in claster (Out-of-memory issue)
+- Memory issues in cluster (Out-of-memory issue)
 - Reading parquet file in cluster
 - Tuning of Random Forest Classifier in order to increase accuracy
