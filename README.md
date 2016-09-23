@@ -22,7 +22,7 @@ Technologies Used:
 
 Preprocessing of Byte File:
 --------------------------
-- The hash files were read from S3 storage from "https://s3.amazonaws.com/eds-uga-csci8360/data/project2/metadata/<filename>
+- The hash files were read from S3 storage from "https://s3.amazonaws.com/eds-uga-csci8360/data/project2/metadata/<filename>"
 - The next step was to read the label file
 - Create a pair resulting from hash file and label file
 - Read the contents of all the files specified in the training set
