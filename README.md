@@ -1,9 +1,9 @@
 Team Name: DAYS
 
-Team Members: 
-Shubhi Jain
-Sharmin Pathan
-Yash Shrivastava
+Team Members:
+Shubhi Jain,
+Sharmin Pathan,
+Yash Shrivastava,
 Dharamendra Kumar
 
 Malware Classification
