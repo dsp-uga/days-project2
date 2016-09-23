@@ -56,7 +56,7 @@ Tuning the accuracy:
 -------------------
 - 1,2,3,4 grams of byte file and opcodes were generated in order to test which provides a better accuracy.
 - Tuning of the parameters of Random Forest classifier, namely maxDepth, no. of trees, maxBin.
-- Final parameter list for the Random Forest classifier used: 
+
 
 
 Challenges Faced:
