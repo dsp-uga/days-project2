@@ -18,6 +18,8 @@ Technologies Used:
 - Resilient Distributed Datasets (RDDs)
 - Dataframes
 - Java 1.8
+- Django API
+- PyParsing API
 
 
 Preprocessing of Byte File:
