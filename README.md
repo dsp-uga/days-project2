@@ -11,7 +11,6 @@ Malware Classification
 Classification Strategy: Random Forest classifier
 
 
-
 Technologies Used:
 -----------------
 - Python 2.7
@@ -19,7 +18,6 @@ Technologies Used:
 - Resilient Distributed Datasets (RDDs)
 - Dataframes
 - Java 1.8
-
 
 
 Preprocessing of Byte File:
@@ -36,13 +34,11 @@ Preprocessing of Byte File:
 - The parquet file is accessed everytime the data is to be read.
 
 
-
 Preprocessing of Opcodes from .asm files:
 ----------------------------------------
 - Two librabries, namely Django and pyparsing have been used for the preporcessing. 
 - Django: Django is a python library to facilitate rapid development and pragmatic design. It has been used for the removal of special symbols from the opcodes.
 - pyparsing: It's a python library for constructing and executing simple grammar. This has been used for opcode extraction.
-
 
 
 Flow:
@@ -54,9 +50,15 @@ Flow:
 - The prediction is then computed.
 
 
-
 Tuning the accuracy:
 -------------------
 - 1,2,3,4 N-grams of byte file and opcodes were generated in order to test which provides a better accuracy.
 - Tuning of the parameters of Random Forest classifier, namely maxDepth, no. of trees, maxBin.
 - Final parameter list for the Random Forest classifier used: 
+
+
+Challenges Faced:
+----------------
+- Memory issues in claster (Out-of-memory issue)
+- Reading parquet file in cluster
+- Tuning of Random Forest Classifier in order to increase accuracy
