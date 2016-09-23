@@ -128,7 +128,5 @@ def main():
     # Ngram Generation of Training Data
     #---------------------------------------
     
-
-
 if __name__ == "__main__":
     main(sys.argv)
