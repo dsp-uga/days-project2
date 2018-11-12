@@ -16,4 +16,5 @@ def createNgram(schemaByte,value):
 
 	ngram = NGram(n=value, inputCol="content", outputCol="n-grams")
     ngramDataFrame = ngram.transform(schemaByte).select("hashcodefile","label","n-grams")
-    ngramDataFrameRDD=ngramDataFrame.rddeturn ngramDataFrameRDD
+    ngramDataFrameRDD=ngramDataFrame.rdd
+    return ngramDataFrameRDD
